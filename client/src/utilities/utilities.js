@@ -100,7 +100,7 @@ export const nameCheck = (password, firstName, lastName) => {
     let valid = true;
     let a = 0;
     for (let i = 0; i < password.length; i++) {
-        if (password.slice(i, firstName.length + a++) == firstName) {
+        if (password.slice(i, firstName.length + a++).toLowerCase() == firstName.toLowerCase()) {
             valid = false;
             console.log("name in password");
             break;
@@ -108,7 +108,7 @@ export const nameCheck = (password, firstName, lastName) => {
     }
     a = 0;
     for (let i = 0; i < password.length; i++) {
-        if (password.slice(i, lastName.length + a++) == lastName) {
+        if (password.slice(i, lastName.length + a++).toLowerCase() == lastName.toLowerCase()) {
             valid = false;
             console.log("name in password");
             break;
