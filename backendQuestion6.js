@@ -1,43 +1,44 @@
-// function will compress any string without numbers if needed
+// function will compress string
 
-const compress =  (string) => {
-    let stringArray = string.split("");
+const compress = (string) => {
     let compressedString = "";
-    for (let i = 0; i < stringArray.length; i++) {
+    for (let i = 0; i < string.length; i++) {
         let count = 1;
-        let char = stringArray[i];
-            while (i < stringArray.length - 1 && stringArray[i] == stringArray[i + 1]) {
-                count++;
-                i++;
-            }
-            compressedString += char + count;         
+        let char = string.charAt(i);
+        while (string.charAt(i) == string.charAt(i + 1)) {
+            count++;
+            i++;
+        }
+        compressedString += char + count;
     }
-    if(compressedString.length < string.length){
+    if (compressedString.length < string.length) {
         return compressedString;
-    }else{
+    } else {
         return string;
     }
 }
 
 // function will decompress string
 
-const decompress =  (string) => {
-    if(string.match(/[0-9]/g) == null){
+const decompress = (string) => {
+    if (string.search(/[0-9]/) == -1) {
+        console.log("cool")
         return string;
     }
     let decompressedString = "";
-    for (let i = 0; i < string.length;) {
+    let i = 0;
+    while (i < string.length) {
         let char = string[i];
         let count = 0;
-        i++;
-        while (i < string.length && parseInt(string[i]) >= 1 && parseInt(string[i]) <= 9) {
-            count =  count * 10 + parseInt(string[i]);
+        while (parseInt(string.charAt(i + 1)) > -1) {
+            count = count * 10 + parseInt(string.charAt(i + 1));
             i++;
         }
         while (count > 0) {
             decompressedString += char;
             count--;
         }
+        i++;
     }
     return decompressedString;
 }
