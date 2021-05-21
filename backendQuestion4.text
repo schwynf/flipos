@@ -1,0 +1,7 @@
+BackendQuestion4
+
+
+
+1) My first solution would be to increase the timeout limit so the request doesn't timeout.
+
+2) My second solution would be to setup a work request. When the server recieves a request it will be validated then return an id or url to the client that can be used to check the status of request. When the request is ready the server will return the requested CSV file or the user can hit another endpoint to receive file.

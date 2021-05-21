@@ -1,0 +1,55 @@
+
+.container-wrapper {
+    width: 500px;
+    //changed div to form and took out inner-container
+    form {
+      label {
+        color: #ccc;    
+      }
+      textarea {
+        border: solid 1px #eee;
+        border-radius: 3px;
+        font-size: 12px;
+        padding: 1em 2em;
+        height: 150px;
+      }
+    }
+  }
+  
+  //no text input type
+  input {
+    border: solid 1px #eee;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1em 2em;
+  }
+  
+
+  //reduce parameters. Function only needs one argument
+  .btn(@color) {
+    padding: 1rem 3rem;
+    font-size: 14px;
+    background: #fff;
+    color: @color;
+    border: solid 2px @color;
+    &:hover {
+      background: @color;
+      color: #fff;
+    }
+  }
+
+  //change button arguments to correlate with function
+   
+  .blue-button {
+    .btn(blue);
+  } 
+  
+  .orange-button {
+    .btn(orange);
+  }
+  
+
+  //take out green button not needed
+  // .green-button {
+  //   .btn(green, green);
+  // }
