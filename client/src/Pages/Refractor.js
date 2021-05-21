@@ -10,7 +10,6 @@ const Refractor = () => {
                     <div class="form-group">
                         <label for="email">Email address</label><br></br>
                         <input type="email" name="email" placeholder="Email" ></input><br></br>
-
                     </div>
                     <div className="form-group">
                         <label for="password">Password</label><br></br>
@@ -18,7 +17,7 @@ const Refractor = () => {
                     </div>
                     <div className="form-group">
                         <label for="message">Why are you signing up?</label><br></br>
-                        <textarea></textarea><br></br>
+                        <textarea name="message" placeholder="Message"></textarea><br></br>
                     </div>
                     <button className="blue-button">Sign up</button>
                     <button className="orange-button">Cancel</button>

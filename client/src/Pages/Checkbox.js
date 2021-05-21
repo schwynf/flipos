@@ -5,15 +5,16 @@ import "./Checkbox.css"
 const Checkbox = () => {
     return (
         <>
-            <label className="container mt-5"><br></br>
-                <input type="checkbox" name="checkbox1"></input>
-                <span className="checkmark"></span>
-            </label>
-
-            <label className="container"><br></br>
-                <input type="checkbox" name="checkbox2"></input>
-                <span className="checkmark"></span>
-            </label>
+            <form>
+                <label className="container mt-5"><br></br>
+                    <input type="checkbox"></input>
+                    <span className="checkmark"></span>
+                </label>
+                <label className="container"><br></br>
+                    <input type="checkbox"></input>
+                    <span className="checkmark"></span>
+                </label>
+            </form>
         </>
     )
 }
