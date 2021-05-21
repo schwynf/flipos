@@ -22,7 +22,6 @@ const compress = (string) => {
 
 const decompress = (string) => {
     if (string.search(/[0-9]/) == -1) {
-        console.log("cool")
         return string;
     }
     let decompressedString = "";
