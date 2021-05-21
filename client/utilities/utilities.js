@@ -8,7 +8,7 @@ export const  passwordLengthCheck = (password)=>{
 
 
 export const caseSensitiveCheck = (password)=>{
-    if (password.search(/[a-z]/) < 0 || password.search(/[A-Z]/) < 0) {
+    if (password.search(/[a-z]/) == -1 || password.search(/[A-Z]/) == -1) {
         console.log("invalid for no lowercase or uppercase letters");
         return false;
     }

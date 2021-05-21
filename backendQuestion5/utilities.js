@@ -7,16 +7,19 @@ module.exports = {
 
     },
     caseSensitiveCheck: (password)=>{
-        if (password.search(/[a-z]/) < 0 || password.search(/[A-Z]/) < 0) {
+        if (password.search(/[a-z]/) == -1 || password.search(/[A-Z]/) == -1) {
             return false;
         }
             return true;
     },
     numberCheck:  (password)=>{
-        if (password.match(/[0-9]/g) && password.match(/[0-9]/g).length < 3) {
+        if (!password.match(/[0-9]/g)) {
             return false;
         }
-            return true;
+        if(password.match(/[0-9]/g).length < 3){
+            return false;
+        }
+        return true;
     },
     spaceCheck: (password)=>{
         if (password.match(/ /)) {
@@ -31,7 +34,6 @@ module.exports = {
                 break;
             }
             if (password[i] === password[i + 1] && password[i] === password[i + 2] && password[i] === password[i + 3] && password[i] === password[i + 4]) {
-                console.log("invalid for repeated letters");
                 valid = false;
                 break;
             }
