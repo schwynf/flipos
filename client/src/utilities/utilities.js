@@ -1,9 +1,9 @@
 export const passwordLengthCheck = (password) => {
     if (password.length < 8 || password.length > 12) {
-        console.log("invalid for character count")
-        return false
+        console.log("invalid for character count");
+        return false;
     }
-    return true
+    return true;
 }
 
 
@@ -12,7 +12,7 @@ export const caseSensitiveCheck = (password) => {
         console.log("invalid for no lowercase or uppercase letters");
         return false;
     }
-    return true
+    return true;
 }
 
 
@@ -76,11 +76,11 @@ export const specialCharacterCheck = (password) => {
                 ++count
             }
             if (count > 2) {
-                break
+                break;
             }
         }
         if (count > 2) {
-            break
+            break;
         }
         a++;
     }
