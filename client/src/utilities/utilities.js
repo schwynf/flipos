@@ -17,7 +17,11 @@ export const caseSensitiveCheck = (password) => {
 
 
 export const numberCheck = (password) => {
-    if (password.match(/[0-9]/g) && password.match(/[0-9]/g).length < 3) {
+    if (!password.match(/[0-9]/g)) {
+        console.log("invalid for not enough numbers");
+        return false;
+    }
+    if(password.match(/[0-9]/g).length < 3){
         console.log("invalid for not enough numbers");
         return false;
     }
