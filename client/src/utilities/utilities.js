@@ -1,4 +1,4 @@
-export const  passwordLengthCheck = (password)=>{
+export const passwordLengthCheck = (password) => {
     if (password.length < 8 || password.length > 12) {
         console.log("invalid for character count")
         return false
@@ -7,34 +7,34 @@ export const  passwordLengthCheck = (password)=>{
 }
 
 
-export const caseSensitiveCheck = (password)=>{
+export const caseSensitiveCheck = (password) => {
     if (password.search(/[a-z]/) < 0 || password.search(/[A-Z]/) < 0) {
         console.log("invalid for no lowercase or uppercase letters");
         return false;
     }
-        return true
+    return true
 }
 
 
-export const numberCheck = (password)=>{
+export const numberCheck = (password) => {
     if (password.match(/[0-9]/g) && password.match(/[0-9]/g).length < 3) {
         console.log("invalid for not enough numbers");
         return false;
     }
-        return true;
+    return true;
 }
 
 
-export const spaceCheck = (password)=>{
+export const spaceCheck = (password) => {
     if (password.match(/ /)) {
         console.log("invalid for having space");
         return false;
     }
-        return true;
+    return true;
 }
 
 
-export const repeatedLettersCheck = (password)=>{
+export const repeatedLettersCheck = (password) => {
     let valid = true;
     for (let i = 0; i < password.length; i++) {
         if (password[i + 4] === undefined) {
@@ -49,7 +49,7 @@ export const repeatedLettersCheck = (password)=>{
     return valid;
 }
 
-export const repeatedNumbersCheck = (password)=>{
+export const repeatedNumbersCheck = (password) => {
     let valid = true;
     for (let i = 0; i < password.length; i++) {
         if (password[i + 5] === undefined) {
@@ -65,7 +65,7 @@ export const repeatedNumbersCheck = (password)=>{
     return valid;
 }
 
-export const specialCharacterCheck = (password)=>{
+export const specialCharacterCheck = (password) => {
     let valid = true;
     var specialCharArray = ["!", "\”", "#", "$", "%", "&", "\’", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
     let a = 0;
@@ -92,24 +92,22 @@ export const specialCharacterCheck = (password)=>{
     return valid;
 }
 
-export const nameCheck = (password,firstName,lastName)=>{
+export const nameCheck = (password, firstName, lastName) => {
     let valid = true;
-    for(let i = 0; i < password.length; i++){
-        if(password[i] === firstName[0] ){
-            if(password.slice(i, firstName.length) === firstName){
-                valid = false;
-                console.log("name in password");
-                break;
-            }
+    let a = 0;
+    for (let i = 0; i < password.length; i++) {
+        if (password.slice(i, firstName.length + a++) == firstName) {
+            valid = false;
+            console.log("name in password");
+            break;
         }
     }
-    for(let i = 0; i < password.length; i++){
-        if(password[i] === lastName[0] ){
-            if(password.slice(i, lastName.length) === lastName){
-                valid = false;
-                console.log("name in password");
-                break;
-            }
+    a = 0;
+    for (let i = 0; i < password.length; i++) {
+        if (password.slice(i, lastName.length + a++) == lastName) {
+            valid = false;
+            console.log("name in password");
+            break;
         }
     }
     return valid;

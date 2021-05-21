@@ -13,28 +13,28 @@ const Signup = () => {
         event.preventDefault();
         let valid = true;
 
-        if(!passwordLengthCheck(password.trim())){
+        if(!passwordLengthCheck(password)){
             valid = false
         }
-        if(!caseSensitiveCheck(password.trim())){
+        if(!caseSensitiveCheck(password)){
             valid = false
         }
-        if(!numberCheck(password.trim())){
+        if(!numberCheck(password)){
             valid = false
         }
-        if(!spaceCheck(password.trim())){
+        if(!spaceCheck(password)){
             valid = false
         }
-        if(!repeatedLettersCheck(password.trim())){
+        if(!repeatedLettersCheck(password)){
             valid = false
         }
-        if(!repeatedNumbersCheck(password.trim())){
+        if(!repeatedNumbersCheck(password)){
             valid = false
         }
-        if(!specialCharacterCheck(password.trim())){
+        if(!specialCharacterCheck(password)){
             valid = false
         }
-        if(!nameCheck(password.trim(),firstName.trim(),lastName.trim())){
+        if(!nameCheck(password,firstName,lastName)){
             valid = false
         }
 
@@ -62,7 +62,7 @@ const Signup = () => {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"> <i className="fa fa-user"></i> </span>
                                         </div>
-                                        <input onChange={event => setFirstName(event.target.value)} name="firstName" className="form-control" placeholder="First Name" type="text" value={firstName}></input>
+                                        <input onChange={event => setFirstName(event.target.value.trim())} name="firstName" className="form-control" placeholder="First Name" type="text" value={firstName}></input>
                                     </div>
                                 </div>
                                 <div className="form-group">
@@ -70,7 +70,7 @@ const Signup = () => {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"> <i className="fa fa-user"></i> </span>
                                         </div>
-                                        <input onChange={event => setLastName(event.target.value)} name="lastName" className="form-control" placeholder="Last Name" type="text" value={lastName}></input>
+                                        <input onChange={event => setLastName(event.target.value.trim())} name="lastName" className="form-control" placeholder="Last Name" type="text" value={lastName}></input>
                                     </div>
                                 </div>
                                 <div className="form-group">
@@ -78,13 +78,12 @@ const Signup = () => {
                                         <div className="input-group-prepend">
                                             <span className="input-group-text"> <i className="fa fa-user"></i> </span>
                                         </div>
-                                        <input onChange={event => setPassword(event.target.value)} name="password" className="form-control" placeholder="**********" type="password" value={password}></input>
+                                        <input onChange={event => setPassword(event.target.value.trim())} name="password" className="form-control" placeholder="**********" type="password" value={password}></input>
                                     </div>
                                 </div>
                                 <div className="form-group">
                                     <button disabled={!(firstName && lastName && password)} onClick={handleFormSubmit} type="submit" className="btn btn-primary btn-block"> Register </button>
                                 </div>
-                                <p className="text-center">Already have an account? <a href="/login">Login</a></p>
                             </form>
                         </article>
                     </div>
