@@ -30,3 +30,5 @@ const passwordValidator = (password,firstName,lastName) => {
 
     return true;
 };
+
+console.log(passwordValidator("schwy@@I908", "schwyn", "francis"))

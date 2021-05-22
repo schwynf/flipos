@@ -33,7 +33,7 @@ module.exports = {
             if (password[i + 4] === undefined) {
                 break;
             }
-            if (password[i] === password[i + 1] && password[i] === password[i + 2] && password[i] === password[i + 3] && password[i] === password[i + 4]) {
+            if (password[i] === password[i + 1] && password[i] === password[i + 2] && password[i] === password[i + 3] && password[i] === password[i + 4] && password[i] === password[i + 5]) {
                 valid = false;
                 break;
             }
