@@ -35,7 +35,6 @@ app.get('/api/billingstreetaddress/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
         res.status(500).send();
     }
 
@@ -49,7 +48,6 @@ app.get('/api/billingpostalcode/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
         res.status(500).send();
     }
 })
@@ -62,7 +60,6 @@ app.get('/api/shippingstate/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
         res.status(500).send();
     }
 })
@@ -75,7 +72,7 @@ app.get('/api/billingstate/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
+      
         res.status(500).send();
     }
 
@@ -89,7 +86,7 @@ app.get('/api/fulladdress/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
+        
         res.status(500).send();
     }
 
@@ -102,8 +99,7 @@ app.get('/api/firstname/:id', function (req, res) {
             }
         });
         res.json(data)
-    } catch (error) {
-        console.error(error);
+    } catch (error) {  
         res.status(500).send();
     }
 
@@ -116,8 +112,7 @@ app.get('/api/lastname/:id', function (req, res) {
             }
         });
         res.json(data)
-    } catch (error) {
-        console.error(error);
+    } catch (error) {  
         res.status(500).send();
     }
 
@@ -132,8 +127,7 @@ app.get('/api/recentorders/:id', function (req, res) {
             }
         });
         res.json(data)
-    } catch (error) {
-        console.error(error);
+    } catch (error) { 
         res.status(500).send();
     }
 
@@ -149,7 +143,6 @@ app.get('/api/lastorder/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
         res.status(500).send();
     }
 
@@ -163,7 +156,7 @@ app.get('/api/order/:id', function (req, res) {
         });
         res.json(data)
     } catch (error) {
-        console.error(error);
+        
         res.status(500).send();
     }
 
@@ -173,7 +166,7 @@ app.post('/api/orders', function (req, res) {
         let data = await db.Orders.findAll({});
         res.json(data)
     } catch (error) {
-        console.error(error);
+       
         res.status(500).send();
     }
 
@@ -184,7 +177,7 @@ app.put('/api/billingaddress/:id', function (req, res) {
         { where: { id: 1 } });
         res.json(data)
     } catch (error) {
-        console.error(error);
+        
         res.status(500).send();
     }
 
@@ -194,7 +187,7 @@ app.post('/api/newsletter', function (req, res) {
         let data = await db.NewsLetter.create(req.body)
         res.json(data)
     } catch (error) {
-        console.error(error);
+        
         res.status(500).send();
     }
 
@@ -204,7 +197,7 @@ app.post('/api/customerfeedback', function (req, res) {
         let data = await db.CustomerFeedback.create(req.body)
         res.json(data)
     } catch (error) {
-        console.error(error);
+        
         res.status(500).send();
     }
 })

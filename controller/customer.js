@@ -1,6 +1,6 @@
 //backend 
 
-class Employee {
+class Customer {
     constructor(id,firstName,lastName,email){
         this.id = id;
         this.firstName = firstName;
@@ -71,4 +71,3 @@ class Employee {
         return
     }
 }
-module.exports = Employee;

@@ -1,5 +1,3 @@
-const bcrypt = require("bcrypt");
-
 module.exports = (sequelize, DataTypes) => {
   const Orders = sequelize.define(
     "orders",
