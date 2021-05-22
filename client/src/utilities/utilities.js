@@ -21,7 +21,7 @@ export const numberCheck = (password) => {
         console.log("invalid for not enough numbers");
         return false;
     }
-    if(password.match(/[0-9]/g).length < 3){
+    if (password.match(/[0-9]/g).length < 3) {
         console.log("invalid for not enough numbers");
         return false;
     }
@@ -59,8 +59,7 @@ export const repeatedNumbersCheck = (password) => {
         if (password[i + 5] === undefined) {
             break;
         }
-        if ((password.charCodeAt(i) >= 48 && password.charCodeAt(i) <= 57) && (password.charCodeAt(i + 1) >= 48 && password.charCodeAt(i + 1)) && (password.charCodeAt(i + 2) >= 48 && password.charCodeAt(i + 2) <= 57) && (password.charCodeAt(i + 3) >= 48 && password.charCodeAt(i + 3) <= 57) && (password.charCodeAt(i + 4) >= 48 && password.charCodeAt(i + 4) <= 57) && (password.charCodeAt(i + 5) >= 48 && password.charCodeAt(i + 5) <= 57)) {
-            console.log("invalid for repeated numbers");
+        if (parseInt(password.charAt(i)) && parseInt(password.charAt(i + 1)) && parseInt(password.charAt(i + 2)) && parseInt(password.charAt(i + 3)) && parseInt(password.charAt(i + 4)) && parseInt(password.charAt(i + 5))) {
             valid = false;
             break;
         }
@@ -79,11 +78,11 @@ export const specialCharacterCheck = (password) => {
             if (specialCharArray[a] === password.charAt(i)) {
                 ++count
             }
-            if (count > 2) {
+            if (count >= 2) {
                 break;
             }
         }
-        if (count > 2) {
+        if (count >= 2) {
             break;
         }
         a++;
@@ -98,21 +97,9 @@ export const specialCharacterCheck = (password) => {
 
 export const nameCheck = (password, firstName, lastName) => {
     let valid = true;
-    let a = 0;
-    for (let i = 0; i < password.length; i++) {
-        if (password.slice(i, firstName.length + a++).toLowerCase() == firstName.toLowerCase()) {
-            valid = false;
-            console.log("name in password");
-            break;
-        }
-    }
-    a = 0;
-    for (let i = 0; i < password.length; i++) {
-        if (password.slice(i, lastName.length + a++).toLowerCase() == lastName.toLowerCase()) {
-            valid = false;
-            console.log("name in password");
-            break;
-        }
+    if (password.search(firstName) > -1 || password.search(lastName) > -1) {
+        console.log("invalid for name in password");
+        return false
     }
     return valid;
 }

@@ -1,39 +1,36 @@
-
 .container-wrapper {
-    width: 500px;
-    form {
-      label {
-        color: #ccc;    
-      }
-      textarea {
-        border: solid 1px #eee;
-        border-radius: 3px;
-        font-size: 12px;
-        padding: 1em 2em;
-        height: 150px;
-      }
-    }
+  width: 500px;
+}
+
+.btn(@color) {
+  padding: 1rem 3rem;
+  font-size: 14px;
+  background: #fff;
+  color: @color;
+  border: solid 2px @color;
+  &:hover {
+    background: @color;
+    color: #fff;
   }
-  
+}
+
+form {
+  label {
+    color: #ccc;    
+  }
+  textarea {
+    border: solid 1px #eee;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1em 2em;
+    height: 150px;
+  }
   input {
     border: solid 1px #eee;
     border-radius: 3px;
     font-size: 12px;
     padding: 1em 2em;
   }
-  
-  .btn(@color) {
-    padding: 1rem 3rem;
-    font-size: 14px;
-    background: #fff;
-    color: @color;
-    border: solid 2px @color;
-    &:hover {
-      background: @color;
-      color: #fff;
-    }
-  }
-   
   .blue-button {
     .btn(blue);
   } 
@@ -41,3 +38,4 @@
   .orange-button {
     .btn(orange);
   }
+}

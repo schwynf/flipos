@@ -1,41 +1,41 @@
 .container-wrapper {
   width: 500px;
 }
-.container-wrapper form label {
+form label {
   color: #ccc;
 }
-.container-wrapper form textarea {
+form textarea {
   border: solid 1px #eee;
   border-radius: 3px;
   font-size: 12px;
   padding: 1em 2em;
   height: 150px;
 }
-input {
+form input {
   border: solid 1px #eee;
   border-radius: 3px;
   font-size: 12px;
   padding: 1em 2em;
 }
-.blue-button {
+form .blue-button {
   padding: 1rem 3rem;
   font-size: 14px;
   background: #fff;
   color: blue;
   border: solid 2px blue;
 }
-.blue-button:hover {
+form .blue-button:hover {
   background: blue;
   color: #fff;
 }
-.orange-button {
+form .orange-button {
   padding: 1rem 3rem;
   font-size: 14px;
   background: #fff;
   color: orange;
   border: solid 2px orange;
 }
-.orange-button:hover {
+form .orange-button:hover {
   background: orange;
   color: #fff;
 }

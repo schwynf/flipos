@@ -1,28 +1,6 @@
 .container-wrapper {
   width: 500px;
-  
-  form {
-    label {
-      color: #ccc;    
-    }
-    textarea {
-      border: solid 1px #eee;
-      border-radius: 3px;
-      font-size: 12px;
-      padding: 1em 2em;
-      height: 150px;
-    }
-  }
 }
-
-input {
-  border: solid 1px #eee;
-  border-radius: 3px;
-  font-size: 12px;
-  padding: 1em 2em;
-}
-
-
 
 .btn(@color) {
   padding: 1rem 3rem;
@@ -35,11 +13,35 @@ input {
     color: #fff;
   }
 }
- 
-.blue-button {
-  .btn(blue);
-} 
 
-.orange-button {
-  .btn(orange);
+form {
+  label {
+    color: #ccc;    
+  }
+  textarea {
+    border: solid 1px #eee;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1em 2em;
+    height: 150px;
+  }
+  input {
+    border: solid 1px #eee;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1em 2em;
+  }
+  .blue-button {
+    .btn(blue);
+  } 
+  
+  .orange-button {
+    .btn(orange);
+  }
 }
+
+
+
+
+ 
+
