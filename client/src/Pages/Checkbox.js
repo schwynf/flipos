@@ -8,11 +8,11 @@ const Checkbox = () => {
             <form>
                 <label className="container mt-5"><br></br>
                     <input type="checkbox"></input>
-                    <span className="checkmark"></span>
+                    <span className="checkmark-box"></span>
                 </label>
                 <label className="container"><br></br>
                     <input type="checkbox"></input>
-                    <span className="checkmark"></span>
+                    <span className="checkmark-box"></span>
                 </label>
             </form>
         </>

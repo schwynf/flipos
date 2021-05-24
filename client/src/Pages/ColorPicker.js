@@ -9,60 +9,60 @@ const ColorPicker = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-3">
-                        <p className="round" id="rcorners1">
+                        <p className="round" id="box1">
                             <div id="line"></div>
                         </p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners2"></p>
+                        <p className="round" id="box2"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners3"></p>
+                        <p className="round" id="box3"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners4"></p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-3">
-                        <p className="round" id="rcorners5"></p>
-                    </div>
-                    <div className="col-3">
-                        <p className="round" id="rcorners6"></p>
-                    </div>
-                    <div className="col-3">
-                        <p className="round" id="rcorners7"></p>
-                    </div>
-                    <div className="col-3">
-                        <p className="round" id="rcorners8"></p>
+                        <p className="round" id="box4"></p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-3">
-                        <p className="round" id="rcorners9"></p>
+                        <p className="round" id="box5"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners10"></p>
+                        <p className="round" id="box6"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners11"></p>
+                        <p className="round" id="box7"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners12"></p>
+                        <p className="round" id="box8"></p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-3">
-                        <p className="round" id="rcorners13"></p>
+                        <p className="round" id="box9"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners14"></p>
+                        <p className="round" id="box10"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners15"></p>
+                        <p className="round" id="box11"></p>
                     </div>
                     <div className="col-3">
-                        <p className="round" id="rcorners16"></p>
+                        <p className="round" id="box12"></p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-3">
+                        <p className="round" id="box13"></p>
+                    </div>
+                    <div className="col-3">
+                        <p className="round" id="box14"></p>
+                    </div>
+                    <div className="col-3">
+                        <p className="round" id="box15"></p>
+                    </div>
+                    <div className="col-3">
+                        <p className="round" id="box16"></p>
                     </div>
                 </div>
             </div>
