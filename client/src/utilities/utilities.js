@@ -97,8 +97,8 @@ export const specialCharacterCheck = (password) => {
 
 export const nameCheck = (password, firstName, lastName) => {
     let valid = true;
-    if (password.search(firstName) > -1 || password.search(lastName) > -1) {
-        console.log("invalid for name in password");
+    if(password.toLowerCase().search(firstName.toLowerCase()) > -1 || password.toLowerCase().search(lastName.toLowerCase()) > -1){
+        console.log("invalid for name check");
         return false
     }
     return valid;

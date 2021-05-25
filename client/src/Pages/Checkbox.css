@@ -2,13 +2,15 @@
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   font-size: 22px;
+  width:200px;
+  height:10px;
 }
 
 .container input {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .checkmark-box {

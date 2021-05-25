@@ -65,23 +65,16 @@ module.exports = {
                     ++count;
                 }
                 if (count >= 2) {
-                    break;
+                    return valid;
                 }
-            }
-            if (count >= 2) {
-                break;
             }
             a++;
         }
-    
-        if (count < 2) {
-            valid = false;
-        }
-        return valid;
+        return false;
     },
     nameCheck: (password, firstName, lastName) => {
         let valid = true;
-        if(password.search(firstName) > -1 || password.search(lastName) > -1){
+        if(password.toLowerCase().search(firstName.toLowerCase()) > -1 || password.toLowerCase().search(lastName.toLowerCase()) > -1){
             return false
         }
         return valid;
